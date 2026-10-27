@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
     navBox.style.cssText = 'position:absolute; bottom:4%; left:50%; transform:translateX(-50%); display:flex; gap:12px; z-index:30;';
     navBox.innerHTML =
       '<a href="./5.html" style="background:#0284c7; color:#fff; padding:10px 16px; border-radius:12px; text-decoration:none; font-family:Montserrat,sans-serif; font-size:13px; font-weight:600; white-space:nowrap;">🧪 Сделай сам!</a>' +
-      '<a href="./1.html" style="background:#16a34a; color:#fff; padding:10px 16px; border-radius:12px; text-decoration:none; font-family:Montserrat,sans-serif; font-size:13px; font-weight:600; white-space:nowrap;">🏠 На главную</a>';
+      '<a href="./index.html" style="background:#16a34a; color:#fff; padding:10px 16px; border-radius:12px; text-decoration:none; font-family:Montserrat,sans-serif; font-size:13px; font-weight:600; white-space:nowrap;">🏠 На главную</a>';
     document.getElementById('overflow-wrapper').appendChild(navBox);
   }
 
