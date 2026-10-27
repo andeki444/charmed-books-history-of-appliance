@@ -1,0 +1,265 @@
+/* ==========================================================================
+   1.css — Точная матрица координат по макету Figma (852 x 477)
+   ========================================================================== */
+
+#content {
+  display: none !important;
+}
+
+body {
+  background-color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Точная пропорция макета 852 / 477 = 1.786 */
+#scene {
+  position: relative !important;
+  width: min(100vw, calc(100vh * (852 / 477))) !important;
+  height: min(100vh, calc(100vw * (477 / 852))) !important;
+  max-width: none !important;
+  max-height: none !important;
+  aspect-ratio: 852 / 477 !important;
+  margin: auto !important;
+  flex-shrink: 0 !important;
+}
+
+#overflow-wrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* 1. Фон комнаты */
+#bg-room {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  z-index: 1;
+}
+
+/* 2. Вывеска слева и текст внутри черной таблички */
+#signboard-box {
+  position: absolute;
+  left: 0%;
+  top: 19.5%;
+  width: 38.7%;
+  height: 49.8%;
+  z-index: 5;
+  pointer-events: none;
+}
+
+#signboard {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+}
+
+#signboard-text {
+  position: absolute;
+  left: 28%;
+  top: 52%; /* Опустили ниже, чтобы встать по центру черной таблички */
+  width: 60%;
+  color: #ffffff;
+  text-align: left;
+  z-index: 6;
+}
+
+#signboard-text h2 {
+  margin: 0 0 0.9vw 0;
+  font-family: "Neucha", cursive, sans-serif;
+  font-size: clamp(20px, 4.0vw, 40px);
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+#signboard-text p {
+  margin: 0;
+  font-family: "Montserrat", "Montserrat Alternates", Arial, sans-serif;
+  font-size: clamp(7px, 0.82vw, 14px);
+  font-weight: 400;
+  line-height: 1.42;
+  letter-spacing: 0.2px;
+  color: #e2e8f0;
+}
+
+/* 3. Бытовая техника */
+.appliance {
+  position: absolute;
+  cursor: pointer;
+  object-fit: fill;
+  transition: transform 0.22s ease, filter 0.22s ease;
+}
+
+.appliance:hover {
+  transform: translateY(-3px) scale(1.03);
+  filter: drop-shadow(0 0 12px #ffe600) drop-shadow(0 0 4px #ffffff);
+  z-index: 25 !important;
+}
+
+/* Телевизор: w=119px, h=77px в макете */
+#tv {
+  left: 60.5%;
+  top: 26.8%;
+  width: 14.0%;
+  height: 16.1%;
+  z-index: 6;
+}
+
+/* Пылесос: w=76px, h=163px */
+#vacuum {
+  left: 54.6%;
+  top: 45.8%;
+  width: 7.9%;
+  height: 34.2%;
+  z-index: 10;
+}
+
+/* Стиральная машина: w=96px, h=120px */
+#washer {
+  left: 60.8%;
+  top: 54.5%;
+  width: 10.9%;
+  height: 23.6%;
+  z-index: 7;
+}
+
+/* Тостер: w=52px, h=43px */
+#toaster {
+  left: 64.9%;
+  top: 49.6%;
+  width: 4.5%;
+  height: 7.2%;
+  z-index: 8;
+}
+
+/* Микроволновка: w=67px, h=48px */
+#microwave {
+  left: 72.1%;
+  top: 44.8%;
+  width: 6.9%;
+  height: 10.1%;
+  z-index: 8;
+}
+
+/* Холодильник: w=99px, h=244px (стоит ровно на полу) */
+#fridge {
+  left: 80%;
+  top: 29.8%;
+  width: 11.6%;
+  height: 49.2%;
+  z-index: 6;
+}
+
+/* 4. Персонажи */
+
+/* Кошка на крышке холодильника: w=58px, h=67px */
+#cat {
+  position: absolute;
+  left: 79.9%;
+  top: 17.6%;
+  width: 6.8%;
+  height: 14.0%;
+  object-fit: fill;
+  z-index: 12;
+  cursor: pointer;
+  transform-origin: bottom center;
+  animation: catTailMove 4.5s ease-in-out infinite;
+}
+
+@keyframes catTailMove {
+  0%, 100% { transform: rotate(0deg); }
+  30% { transform: rotate(-3deg); }
+  70% { transform: rotate(2deg); }
+}
+
+/* Собака на ковре: w=129px, h=114px */
+#dog {
+  position: absolute;
+  left: 56.5%;
+  top: 70.0%;
+  width: 15.1%;
+  height: 23.9%;
+  object-fit: fill;
+  z-index: 15;
+  cursor: pointer;
+  transform-origin: 30% 70%;
+  animation: dogEarTwitch 5s ease-in-out infinite;
+}
+
+@keyframes dogEarTwitch {
+  0%, 82%, 100% { transform: scale(1) rotate(0deg); }
+  86% { transform: scale(1.02) rotate(-1.5deg); }
+  90% { transform: scale(0.99) rotate(1deg); }
+  94% { transform: scale(1.01) rotate(-0.5deg); }
+}
+
+/* 5. Летающая пчела */
+#bee {
+  position: absolute;
+  left: 48%;
+  top: 38%;
+  width: 24px;
+  height: 24px;
+  z-index: 30;
+  pointer-events: none;
+  animation: beeFly 14s infinite linear;
+}
+
+.wing {
+  transform-origin: center;
+  animation: wingBeat 0.08s infinite alternate;
+}
+
+@keyframes wingBeat {
+  from { transform: scaleY(0.3); }
+  to { transform: scaleY(1.3); }
+}
+
+@keyframes beeFly {
+  0% { transform: translate(0, 0) scaleX(1); }
+  20% { transform: translate(100px, -40px) scaleX(1); }
+  25% { transform: translate(120px, -20px) scaleX(-1); }
+  50% { transform: translate(-80px, 40px) scaleX(-1); }
+  65% { transform: translate(-130px, -30px) scaleX(-1); }
+  70% { transform: translate(-110px, -40px) scaleX(1); }
+  85% { transform: translate(70px, 50px) scaleX(1); }
+  100% { transform: translate(0, 0) scaleX(1); }
+}
+
+/* Отметка пройденной техники на главной */
+.tech-completed {
+  filter: drop-shadow(0 0 8px rgba(34, 197, 94, 0.85));
+}
+
+.completed-badge {
+  position: absolute;
+  transform: translate(10%, -110%);
+  background: #16a34a;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(8px, 0.75vw, 12px);
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  z-index: 30;
+  pointer-events: none;
+  white-space: nowrap;
+}

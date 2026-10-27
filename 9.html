@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>История бытовой техники — Сделай сам: Мини-стиральная машинка</title>
+  <link rel="icon" type="image/png" href="./assets/img/icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/main.css">
+  <link rel="stylesheet" href="./assets/9.css">
+  <link rel="stylesheet" href="./assets/ui.css">
+
+  <script>
+    window.addEventListener('load', function () {
+      var loader = document.getElementById('loader');
+      if (loader) loader.remove();
+    });
+  </script>
+
+  <script src="./postMessageHandler.js"></script>
+  <script src="./assets/ui.js"></script>
+</head>
+
+<body>
+
+  <div id="loader">
+    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+  </div>
+
+  <main>
+
+    <!-- ЛЕВАЯ СТРАНИЦА: ТВОЙ ТЕКСТ ОПЫТА -->
+    <section id="content">
+      <div id="textbox">
+        <div class="content-item">
+          <h3>"Сделай сам": Мини-стиральная машинка</h3>
+          <p>
+            <strong>Что понадобится:</strong><br>
+            - Пластиковый контейнер с крышкой (или прочная банка с крышкой)<br>
+            - Вода, немного стирального порошка<br>
+            - Маленькие вещи (например, носки)<br>
+            - Ручная сила
+          </p>
+          <p>
+            <strong>Как сделать:</strong><br>
+            1. Налей тёплую воду и добавь немного порошка в ведро.<br>
+            2. Положи внутрь вещи и закрой крышку.<br>
+            3. Потряси ведро в течение 1–2 минут — так стирает стиральная машинка, но без твоей помощи!<br>
+            4. Для "полоскания" замени воду и повтори встряску.
+          </p>
+          <div class="diy-actions">
+            <a href="./1.html" class="diy-btn-home">🏠 Вернуться на главную и выбрать другую историю</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПРАВАЯ СТРАНИЦА: ИНТЕРАКТИВНЫЙ КОНСТРУКТОР -->
+    <div id="scene">
+      <div id="overflow-wrapper">
+        <div id="diy-washer-board">
+          <div id="diy-washer-title">Собери и испытай мини-стиралку:</div>
+
+          <!-- Контейнер / банка с крышкой -->
+          <div id="jar-container">
+            <div id="jar-lid">КРЫШКА ЗАКРЫТА</div>
+            <div id="jar-body">
+              <div id="jar-socks">🧦🧦</div>
+              <div id="jar-foam">🫧🫧🫧</div>
+              <div id="jar-water"></div>
+            </div>
+          </div>
+
+          <!-- Панель кнопок по шагам -->
+          <div id="diy-controls">
+            <button class="w-btn" id="btn-water">1. Налить воду + порошок</button>
+            <button class="w-btn" id="btn-socks" disabled>2. Положить носки и закрыть крышку</button>
+            <button class="w-btn" id="btn-shake" disabled>3. Потрясти контейнер!</button>
+            <button class="w-btn" id="btn-rinse" disabled>4. Сменить воду (Полоскание)</button>
+          </div>
+
+          <div id="diy-washer-status">Шаг 1: Налейте тёплую воду с порошком в контейнер</div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="./assets/page9.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>История бытовой техники — Холодильник (Часть 2)</title>
+  <link rel="icon" type="image/png" href="./assets/img/icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/main.css">
+  <link rel="stylesheet" href="./assets/3.css">
+  <link rel="stylesheet" href="./assets/ui.css">
+
+  <script>
+    window.addEventListener('load', function () {
+      var loader = document.getElementById('loader');
+      if (loader) loader.remove();
+    });
+  </script>
+
+  <script src="./postMessageHandler.js"></script>
+  <script src="./assets/ui.js"></script>
+</head>
+
+<body>
+
+  <div id="loader">
+    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+  </div>
+
+  <main>
+
+    <!-- ЛЕВАЯ СТРАНИЦА: ТЕКСТ -->
+    <section id="content">
+      <div id="textbox">
+        <div class="content-item">
+          <p>
+            Прошло почти сто лет, и учёные снова вернулись к идее о том, как создавать холод без льда. Примерно в 1834 году Джейкоб Перкинс, американский изобретатель, придумал устройство, которое работало на том же принципе, что и опыт Каллена. Внутри его машины находилась замкнутая система с эфиром — жидкостью с очень низкой точкой кипения. С помощью насоса пары эфира сжимались и проходили по трубам, отбирая тепло из закрытой камеры. Затем газ охлаждался, снова становился жидкостью, и процесс повторялся по кругу. Так появилась первая паровая компрессионная холодильная установка — прадедушка всех современных холодильников.
+          </p>
+          <p>
+            Позже немецкий инженер Карл фон Линде усовершенствовал эту технологию. В 1870-х годах он создал надёжные холодильные машины, в которых использовался аммиак. Эти огромные агрегаты стали устанавливать на пивоварнях, мясокомбинатах и кораблях, перевозивших продукты через океан.
+          </p>
+          <p>
+            В начале XX века инженеры задумались: как уменьшить такую машину, чтобы она поместилась на обычной кухне? В 1910–1920-х годах появились первые домашние электрические холодильники. Но у них была серьёзная проблема: газы-хладагенты (аммиак, диоксид серы) были токсичными и при утечке представляли опасность.
+          </p>
+          <p>
+            Настоящий прорыв случился в 1927 году, когда компания General Electric выпустила холодильник «Monitor-Top» с герметичным компрессором на крыше, а вскоре учёный Томас Миджли синтезировал безопасный фреон. С этого момента электрический холодильник стал главным прибором на каждой кухне.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПРАВАЯ СТРАНИЦА: СЦЕНА -->
+    <div id="scene">
+      <div id="overflow-wrapper">
+        
+        <!-- 1. Фон с портретом и ковром -->
+        <img class="scene__img" id="bg-room2" src="./assets/img/page-3/bg-room2.png" alt="Фон">
+
+        <!-- 2. Слой снежинок и инея (появляется по мере охлаждения) -->
+        <img class="scene__img" id="snowflakes" src="./assets/img/page-3/snowflakes.png" alt="Снежинки">
+
+        <!-- 3. Белые волны холода -->
+        <img class="scene__img" id="waves" src="./assets/img/page-3/waves.png" alt="Волны холода">
+
+        <!-- 4. Ретро-холодильник и его трубка-змеевик -->
+        <img class="scene__img" id="old-fridge" src="./assets/img/page-3/old-fridge.png" alt="Холодильник">
+        <img class="scene__img" id="coil" src="./assets/img/page-3/coil.png" alt="Змеевик с хладагентом">
+
+        <!-- 5. Собака (спокойная и обдуваемая холодом) -->
+        <img class="scene__img" id="dog-calm" src="./assets/img/page-3/dog-calm.png" alt="Собака">
+        <img class="scene__img" id="dog-wind" src="./assets/img/page-3/dog-wind.png" alt="Собака на ветру">
+
+        <!-- 6. Бабл с призывом подуть и финальным сообщением -->
+        <img class="scene__img" id="bubble" src="./assets/img/page-3/bubble.png" alt="Подуйте в микрофон">
+        <div id="cool-bubble">«Хладагент испаряется — отбирая тепло!»</div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <script src="./assets/page3.js"></script>
+</body>
+
+</html>

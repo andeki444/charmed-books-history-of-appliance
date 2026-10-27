@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>История бытовой техники — Стиральная машина (Часть 2)</title>
+  <link rel="icon" type="image/png" href="./assets/img/icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/main.css">
+  <link rel="stylesheet" href="./assets/7.css">
+  <link rel="stylesheet" href="./assets/ui.css">
+
+  <script>
+    window.addEventListener('load', function () {
+      var loader = document.getElementById('loader');
+      if (loader) loader.remove();
+    });
+  </script>
+
+  <script src="./postMessageHandler.js"></script>
+  <script src="./assets/ui.js"></script>
+</head>
+
+<body>
+
+  <div id="loader">
+    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+  </div>
+
+  <main>
+
+    <!-- ЛЕВАЯ СТРАНИЦА: ТЕКСТ 2 СТРАНИЦЫ -->
+    <section id="content">
+      <div id="textbox">
+        <div class="content-item">
+          <p>
+            В 1874 году американец Уильям Блэкстоун сделал подарок своей жене — он построил для нее стиральную машину прямо у себя в сарае. Его конструкция оказалась удачной. Уильям начал продавать такие машины соседям. Потом дело дошло до открытия фабрики. В его машинах тоже нужно было крутить ручку, но белья за раз помещалось гораздо больше, чем в тазу. Эта фабрика работает до сих пор и считается старейшим производителем стиральных машин в мире.
+          </p>
+          <p>
+            Прошло больше тридцати лет, и наступил XX век. В это время фабрики уже вовсю работали на паровых двигателях. Стиральные машины к тому времени стали привычными, но все еще ручными.
+          </p>
+          <p>
+            В 1908 году в Америке произошло событие, которое навсегда изменило домашнюю работу. Инженер Альва Фишер создал стиральную машину, которую назвал Thor. Она представляла собой деревянный барабан, установленный на металлической раме. Сверху была крышка, через которую загружали белье. Снизу находился мотор, а сбоку — большой ремень. Когда человек включал вилку в розетку, мотор начинал жужжать и сам вращал барабан с бельем. Никаких ручек больше крутить не требовалось.
+          </p>
+          <p>
+            Вода в машину по-прежнему наливалась вручную. Нагревать ее тоже приходилось отдельно, на плите. Но когда вода была налита и мотор включался, барабан начинал вращаться сам, переворачивая белье снова и снова.
+          </p>
+          <p>
+            Правда, у первой электрической машины хватало недостатков. Мотор находился снизу, и вода часто капала на него, отчего било током. Многие люди боялись подходить к машине мокрыми руками.
+          </p>
+          <p>
+            К 1910-м годам электрические стиральные машины начали появляться в каталогах и магазинах по всей Америке, а потом и в Европе. Другие компании тоже стали выпускать похожие устройства. Одни делали баки из оцинкованного железа, другие из меди, третьи продолжали использовать дерево. Моторы становились надежнее, ремни прятали под кожухи, чтобы не травмироваться. Но принцип оставался тем же: мотор крутит барабан, а воду наливают и сливают вручную.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПРАВАЯ СТРАНИЦА: СЦЕНА МАШИНЫ THOR -->
+    <div id="scene">
+      <div id="overflow-wrapper">
+        
+        <!-- 6 отдельных волн вибрации -->
+        <img class="scene__img thor-wave" id="twave-1" src="./assets/img/page-7/wave-3.png" alt="Волна 1">
+        <img class="scene__img thor-wave" id="twave-2" src="./assets/img/page-7/wave-2.png" alt="Волна 2">
+        <img class="scene__img thor-wave" id="twave-3" src="./assets/img/page-7/wave-1.png" alt="Волна 3">
+        <img class="scene__img thor-wave" id="twave-4" src="./assets/img/page-7/wave-4.png" alt="Волна 4">
+        <img class="scene__img thor-wave" id="twave-5" src="./assets/img/page-7/wave-5.png" alt="Волна 5">
+        <img class="scene__img thor-wave" id="twave-6" src="./assets/img/page-7/wave-6.png" alt="Волна 6">
+
+        <!-- Машина Thor и бабл -->
+        <img class="scene__img autotrim" id="thor-washer" src="./assets/img/page-7/thor-washer.png" alt="Машина Thor">
+        <img class="scene__img autotrim" id="bubble-hold" src="./assets/img/page-7/bubble-hold.png" alt="Удерживайте кнопку">
+
+        <!-- Персонажи -->
+        <img class="scene__img autotrim" id="woman-left" src="./assets/img/page-7/woman-left.png" alt="Женщина с бельем">
+        <img class="scene__img autotrim" id="woman-right" src="./assets/img/page-7/woman-right.png" alt="Женщина">
+
+        <div id="motor-status">Удерживайте машинку или бабл, чтобы запустить мотор (0%)</div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <script src="./assets/page7.js"></script>
+</body>
+
+</html>

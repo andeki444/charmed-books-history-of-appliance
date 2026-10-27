@@ -1,0 +1,106 @@
+body, #content { background-color: #121212; }
+#textbox { align-items: flex-start; max-width: 620px; }
+#textbox h3 { color: #ffffff; font-family: "Montserrat", sans-serif; font-size: clamp(18px, 1.8vw, 26px); margin-bottom: 18px; }
+#textbox p { color: #d4d4d8; font-family: "Montserrat", sans-serif; font-size: clamp(12px, 1.0vw, 15px); line-height: 1.6; margin-bottom: 16px; }
+
+.diy-btn-home {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 20px;
+  background: #16a34a;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 12px;
+}
+
+#diy-board {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, #0f172a 0%, #020617 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6%;
+  gap: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+#diy-title {
+  color: #f8fafc;
+  font-size: clamp(13px, 1.1vw, 17px);
+  font-weight: 600;
+  text-align: center;
+}
+
+#vessel {
+  width: 55%;
+  height: 48%;
+  border: 4px solid #64748b;
+  border-top: none;
+  border-radius: 0 0 28px 28px;
+  background: rgba(255, 255, 255, 0.04);
+  display: flex;
+  flex-direction: column-reverse;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 0 25px rgba(56, 189, 248, 0.15);
+}
+
+#layer-sand, #layer-water, #layer-food {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: clamp(11px, 0.9vw, 14px);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+}
+
+#layer-sand { height: 28%; background: #b45309; }
+#layer-water { height: 36%; background: linear-gradient(180deg, #38bdf8, #0284c7); }
+#layer-food { height: 36%; background: rgba(34, 197, 94, 0.35); }
+
+.layer-shown {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+#diy-steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.step-btn {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid #38bdf8;
+  background: #0369a1;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.step-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  border-color: #475569;
+  background: #1e293b;
+}
+
+#diy-status {
+  color: #7dd3fc;
+  font-size: 13px;
+  font-weight: 600;
+}

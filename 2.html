@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>История бытовой техники — Холодильник (Часть 1)</title>
+  <link rel="icon" type="image/png" href="./assets/img/icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/main.css">
+  <link rel="stylesheet" href="./assets/2.css">
+  <link rel="stylesheet" href="./assets/ui.css">
+
+  <script>
+    window.addEventListener('load', function () {
+      var loader = document.getElementById('loader');
+      if (loader) loader.remove();
+    });
+  </script>
+
+  <script src="./postMessageHandler.js"></script>
+  <script src="./assets/ui.js"></script>
+</head>
+
+<body>
+
+  <div id="loader">
+    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+  </div>
+
+  <main>
+
+    <!-- ЛЕВАЯ СТРАНИЦА: ТЕКСТ ИСТОРИИ -->
+    <section id="content">
+      <div id="textbox">
+        <div class="content-item">
+          <h3>Холодильник</h3>
+          <p>
+            История охлаждения продуктов началась задолго до появления техники. Тысячи лет назад люди заметили, что в земляных ямах и пещерах еда портится медленнее. Они начали выкапывать погреба — специальные углубления в земле, где хранили овощи, мясо и рыбу. Зимой, когда реки замерзали, люди кололи лёд, укладывали его в ямы и укрывали сверху соломой и опилками. В таком укрытии лёд мог храниться до самого лета. Тогда продукты укладывали прямо на лёд или рядом с ним. Этот способ хранения использовали многие народы долгое время.
+          </p>
+          <p>
+            В XVIII веке люди научились строить специальные ледники. В деревянных сооружениях снизу складывали продукты, а сверху загружали лёд. Холодный воздух опускался к овощам, фруктам, мясу, и они оставались свежими. Такие ледники были у богатых людей и в больших городах. Простые крестьяне по-прежнему пользовались погребами.
+          </p>
+          <p>
+            Уже в середине XVIII века люди стали проводить первые опыты с искусственным охлаждением. В 1755 году шотландский учёный Уильям Каллен взял ёмкость с водой и поместил её в другую ёмкость с особой жидкостью — диэтиловым эфиром. С помощью насоса Каллен начал откачивать воздух из сосуда с эфиром. Тогда он начал быстро закипать и испаряться, но для этого нужно было тепло. Кипящий эфир стал забирать его у всего вокруг — у воздуха и у воды. Она так сильно охладилась, что превратилась в лёд, хотя в комнате было тепло. Это был первый в истории аппарат, который создавал холод без использования льда из природы. Сам Каллен был врачом и рассматривал своё открытие скорее как научную диковинку. Устройство так и осталось лабораторным экспериментом и не ушло в дома.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПРАВАЯ СТРАНИЦА: СЦЕНА ПЕЩЕРЫ -->
+    <div id="scene">
+      <div id="overflow-wrapper">
+        <img class="scene__img" id="bg-cave" src="./assets/img/page-2/bg-cave.png" alt="Пещера">
+
+        <!-- Подсказка и зона сброса льда над мясом и рыбой -->
+        <div id="drop-zone" title="Перетащите лёд сюда"></div>
+        <div id="ice-hint">Перетащите лёд к продуктам в погреб!</div>
+
+        <!-- Перетаскиваемый кусок льда -->
+        <img class="scene__img autotrim" id="ice" src="./assets/img/page-2/ice.png" alt="Кусок льда">
+      </div>
+    </div>
+
+  </main>
+
+  <script src="./assets/page2.js"></script>
+</body>
+
+</html>

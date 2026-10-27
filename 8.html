@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>История бытовой техники — Стиральная машина (Часть 3)</title>
+  <link rel="icon" type="image/png" href="./assets/img/icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/main.css">
+  <link rel="stylesheet" href="./assets/8.css">
+  <link rel="stylesheet" href="./assets/ui.css">
+
+  <script>
+    window.addEventListener('load', function () {
+      var loader = document.getElementById('loader');
+      if (loader) loader.remove();
+    });
+  </script>
+
+  <script src="./postMessageHandler.js"></script>
+  <script src="./assets/ui.js"></script>
+</head>
+
+<body>
+
+  <div id="loader">
+    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+  </div>
+
+  <main>
+
+    <!-- ЛЕВАЯ СТРАНИЦА: ТЕКСТ 3 СТРАНИЦЫ -->
+    <section id="content">
+      <div id="textbox">
+        <div class="content-item">
+          <p>
+            Шли годы. Инженеры продолжали улучшать стиральные машины. В 1920-х годах они придумали делать баки из эмалированной стали — такие не ржавели и не текли. В 1930-х годах появились машины с центрифугой для отжима. Теперь белье не нужно было пропускать через опасные валики, оно само крутилось на огромной скорости, а вода вылетала из него, как из мокрого зонтика. В 1950-х годах машины научились сами наливать воду, нагревать ее до нужной температуры и сливать грязную. Хозяйке оставалось только загрузить белье, насыпать порошок и нажать одну кнопку. Это были первые полностью автоматические стиральные машины.
+          </p>
+          <p>
+            А что же сегодня? Современные стиральные машины — это уже не просто мотор и бак. Внутри них установлены маленькие компьютеры, которые следят за каждым этапом стирки. Машина сама взвешивает белье, определяет, сколько воды нужно налить, и выбирает подходящую температуру. Если загружено мало вещей, она экономит воду и электричество. Если много — стирает дольше и тщательнее.
+          </p>
+          <p>
+            Многие современные машины умеют сушить белье. После стирки они не просто отжимают его, а продувают теплым воздухом. Через час-два можно доставать полностью сухие простыни и полотенца.
+          </p>
+          <p>
+            Еще одна полезная функция — паровая обработка. Внутри машины стоит специальный нагреватель. Он превращает воду в горячий пар, который проникает в самые глубокие слои ткани, убивает бактерии. Это особенно удобно для детской одежды, мягких игрушек и вещей, которые нельзя стирать в горячей воде.
+          </p>
+          <p>
+            Сейчас машинка может подключаться к интернету. Через приложение на смартфоне можно запустить стирку, когда сам в школе или в гостях. Машина пришлет уведомление, когда белье будет готово. Можно попросить голосового помощника: «Постирай спортивную форму за час» — и машина начнет работать.
+          </p>
+          <p>
+            Все эти умные функции делают стирку быстрой, легкой и почти незаметной. Современные машины расходуют в три раза меньше воды, чем старые модели, и тратят совсем мало электричества. Дизайнеры делают их красивыми — белыми, черными, серебристыми, с подсветкой барабана и сенсорными экранами вместо кнопок.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПРАВАЯ СТРАНИЦА: СОВРЕМЕННАЯ ВАННАЯ С КОТОМ -->
+    <div id="scene">
+      <div id="overflow-wrapper">
+        
+        <img class="scene__img" id="bg-bathroom" src="./assets/img/page-8/bg-bathroom.png" alt="Ванная">
+
+        <!-- 3 фазы бултыхания носков в барабане -->
+        <img class="scene__img autotrim" id="socks-1" src="./assets/img/page-8/socks-1.png" alt="Носки 1">
+        <img class="scene__img autotrim" id="socks-2" src="./assets/img/page-8/socks-2.png" alt="Носки 2">
+        <img class="scene__img autotrim" id="socks-3" src="./assets/img/page-8/socks-3.png" alt="Носки 3">
+
+        <!-- Кот спящий и кот проснувшийся -->
+        <img class="scene__img autotrim" id="cat-sleep" src="./assets/img/page-8/cat-sleep.png" alt="Спящий кот">
+        <img class="scene__img autotrim" id="cat-awake" src="./assets/img/page-8/cat-awake.png" alt="Проснувшийся кот">
+
+        <!-- Баблы -->
+        <img class="scene__img autotrim" id="bubble-shake" src="./assets/img/page-8/bubble-shake.png" alt="Потрясите устройство">
+        <img class="scene__img autotrim" id="bubble-done" src="./assets/img/page-8/bubble-done.png" alt="Носки постираны">
+
+        <!-- Невидимая интерактивная зона поверх машинки для тряски мышкой -->
+        <div id="washer-shake-zone" title="Трясите курсором или нажимайте, чтобы стирать!"></div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <script src="./assets/page8.js"></script>
+</body>
+
+</html>

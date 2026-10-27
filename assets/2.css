@@ -1,0 +1,125 @@
+/* ==========================================================================
+   2.css — Холодильник, Раздел 1 (Пещера и ледник)
+   ========================================================================== */
+
+body {
+  background-color: #121212;
+  animation: fadeInPage 0.45s ease;
+}
+
+@keyframes fadeInPage {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Оформление темной книжной страницы слева как в макете Figma */
+#content {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+#textbox {
+  align-items: flex-start;
+  max-width: 620px;
+}
+
+#textbox .content-item h3 {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(18px, 1.8vw, 26px);
+  margin-bottom: 18px;
+}
+
+#textbox p {
+  color: #d4d4d8;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(12px, 1.0vw, 15px);
+  line-height: 1.55;
+  margin-bottom: 16px;
+}
+
+/* Квадратная сцена справа */
+#bg-cave {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Зона погреба (над мясом и рыбой внизу справа) */
+#drop-zone {
+  position: absolute;
+  left: 38%;
+  top: 46%;
+  width: 34%;
+  height: 36%;
+  border-radius: 50%;
+  z-index: 3;
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+#drop-zone.highlight {
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.28) 0%, transparent 70%);
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.5);
+}
+
+/* Кусок льда: стартует в верхней/правой части, перетаскивается в центр (44.9%, 48.4%) */
+#ice {
+  left: 58%;
+  top: 22%;
+  width: 21.5%;
+  height: 24.5%;
+  object-fit: fill;
+  z-index: 10;
+  cursor: grab;
+  filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.8));
+  transition: filter 0.25s ease;
+  touch-action: none;
+}
+
+#ice:hover {
+  filter: drop-shadow(0 0 16px rgba(96, 165, 250, 1)) brightness(1.1);
+}
+
+#ice.dragging {
+  cursor: grabbing;
+  transform: scale(1.06);
+}
+
+/* Когда лед положен на место в погреб */
+#ice.placed {
+  left: 44.9% !important;
+  top: 48.4% !important;
+  cursor: default;
+  transition: left 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              top 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              filter 0.4s ease;
+  filter: drop-shadow(0 0 22px #38bdf8) drop-shadow(0 0 8px #ffffff);
+}
+
+/* Всплывающая плашка-подсказка */
+#ice-hint {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.82);
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(11px, 1vw, 14px);
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(56, 189, 248, 0.6);
+  z-index: 15;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: opacity 0.3s ease, background 0.3s ease;
+}
+
+#ice-hint.success {
+  background: rgba(3, 105, 161, 0.92);
+  border-color: #7dd3fc;
+}

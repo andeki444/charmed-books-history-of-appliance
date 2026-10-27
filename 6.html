@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>История бытовой техники — Стиральная машина (Часть 1)</title>
+  <link rel="icon" type="image/png" href="./assets/img/icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/main.css">
+  <link rel="stylesheet" href="./assets/6.css">
+  <link rel="stylesheet" href="./assets/ui.css">
+
+  <script>
+    window.addEventListener('load', function () {
+      var loader = document.getElementById('loader');
+      if (loader) loader.remove();
+    });
+  </script>
+
+  <script src="./postMessageHandler.js"></script>
+  <script src="./assets/ui.js"></script>
+</head>
+
+<body>
+
+  <div id="loader">
+    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+  </div>
+
+  <main>
+
+    <!-- ЛЕВАЯ СТРАНИЦА: ТЕКСТ 1 СТРАНИЦЫ -->
+    <section id="content">
+      <div id="textbox">
+        <div class="content-item">
+          <h3>Стиральная машина</h3>
+          <p>
+            Стиральная машина — это устройство, без которого сегодня трудно представить домашнее хозяйство. Но сотни лет стирка оставалась тяжелым ручным трудом. Женщины терли одежду о камни в реках, кипятили белье в котлах, использовали деревянные доски с ребристой поверхностью, чтобы отстирать грязь. На это уходили целые дни, и работа была изнурительной. Только в XIX веке изобретатели наконец задумались о том, как сделать легче стирку.
+          </p>
+          <p>
+            В 1851 году американец Джеймс Кинг придумал деревянное устройство с вращающимся барабаном. Внутрь загружали белье, наливали воду с мылом и крутили ручку. Барабан переворачивал одежду, и вода лучше отстирывала грязь. Это был первый прототип стиральной машины, но работать ей все равно приходилось вручную.
+          </p>
+          <p>
+            В 1858 году другой американец, Хамильтон Смит, создал похожее устройство. В деревянном баке была установлена ось с лопастями, похожими на весла. Когда человек крутил ручку, они вращались и перемешивали белье в мыльной воде. Но такие машины были несовершенны. Они часто рвали одежду, а крутить тяжелый барабан уставали даже сильные руки.
+          </p>
+          <p>
+            В 1861 году изобретатели придумали отжимные валики. Это были два деревянных или резиновых валика, расположенных друг над другом. Мокрое белье пропускали между ними. При этом вода выжималась обратно в бак. Пользоваться такими валиками было опасно: они легко могли раздавить пальцы или затянуть волосы. Люди говорили «попасть в переплет» именно про такие случаи.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПРАВАЯ СТРАНИЦА: СЦЕНА -->
+    <div id="scene">
+      <div id="overflow-wrapper">
+        
+        <!-- 1. Начальная сцена у реки (бабл уже встроен в картинку bg-river.png) -->
+        <img class="scene__img" id="bg-river" src="./assets/img/page-6/bg-river.png" alt="Стирка у реки">
+        
+        <!-- Интерактивная зона клика поверх бабла и стиральной доски в руках женщины -->
+        <div id="board-hotspot" title="Нажмите на стиральную доску"></div>
+
+        <!-- 2. Крупный план доски (появляется после клика) -->
+        <div id="closeup-layer">
+          <img class="scene__img" id="bg-washboard" src="./assets/img/page-6/bg-washboard.png" alt="Стиральная доска">
+          <img class="scene__img autotrim" id="shirt" src="./assets/img/page-6/shirt.png" alt="Бельё">
+          <div id="wash-hint">Водите мышкой (или пальцем) влево-вправо, чтобы отстирать бельё! (0%)</div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <script src="./assets/page6.js"></script>
+</body>
+
+</html>

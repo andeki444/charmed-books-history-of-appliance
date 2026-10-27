@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>История бытовой техники — Сделай сам: Мини-холодильник</title>
+  <link rel="icon" type="image/png" href="./assets/img/icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/main.css">
+  <link rel="stylesheet" href="./assets/5.css">
+  <link rel="stylesheet" href="./assets/ui.css">
+
+  <script>
+    window.addEventListener('load', function () {
+      var loader = document.getElementById('loader');
+      if (loader) loader.remove();
+    });
+  </script>
+
+  <script src="./postMessageHandler.js"></script>
+  <script src="./assets/ui.js"></script>
+</head>
+
+<body>
+
+  <div id="loader">
+    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+  </div>
+
+  <main>
+
+    <!-- ЛЕВАЯ СТРАНИЦА: РЕЦЕПТ ОПЫТА -->
+    <section id="content">
+      <div id="textbox">
+        <div class="content-item">
+          <h3>«Сделай сам!» Мини-холодильник</h3>
+          <p>
+            <strong>Что понадобится:</strong><br>
+            • Большой пластиковый или глиняный контейнер<br>
+            • Контейнер поменьше (вставляется внутрь)<br>
+            • Песок или ткань, холодная вода и лёд<br>
+            • Фрукты или напиток для охлаждения
+          </p>
+          <p>
+            <strong>Как сделать:</strong><br>
+            1. Поставь маленький контейнер внутрь большого и засыпь зазор влажным песком или оберни мокрой тканью.<br>
+            2. Налей холодной воды и добавь кубики льда.<br>
+            3. Положи внутрь продукты. Испаряясь, вода будет забирать тепло у внутренней камеры — точно как в настоящем холодильнике!
+          </p>
+          <div class="diy-actions">
+            <a href="./1.html" class="diy-btn-home">🏠 Вернуться в комнату к другой технике</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПРАВАЯ СТРАНИЦА: ИНТЕРАКТИВНЫЙ КОНСТРУКТОР -->
+    <div id="scene">
+      <div id="overflow-wrapper">
+        <div id="diy-board">
+          <div id="diy-title">Собери свой мини-холодильник (кликни по шагам по порядку):</div>
+
+          <!-- Визуальная колба-контейнер -->
+          <div id="vessel">
+            <div id="layer-sand">Влажный слой</div>
+            <div id="layer-water">Холодная вода и лёд ❄️</div>
+            <div id="layer-food">🍎🥪 Продукты охлаждены!</div>
+          </div>
+
+          <!-- Кнопки-ингредиенты конструктора -->
+          <div id="diy-steps">
+            <button class="step-btn" data-step="1">1. Добавить влажный слой</button>
+            <button class="step-btn" data-step="2" disabled>2. Засыпать лёд и воду</button>
+            <button class="step-btn" data-step="3" disabled>3. Положить продукты</button>
+          </div>
+
+          <div id="diy-status">Шаг 1 из 3: Подготовьте теплоизоляцию</div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="./assets/page5.js"></script>
+</body>
+
+</html>

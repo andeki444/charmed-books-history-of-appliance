@@ -1,0 +1,164 @@
+/* ==========================================================================
+   4.css — Холодильник, Раздел 3 (Кухня, пингвин и мороженое)
+   ========================================================================== */
+
+body {
+  background-color: #121212;
+  animation: fadeInPage 0.45s ease;
+}
+
+@keyframes fadeInPage {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#content {
+  background-color: #121212;
+}
+
+#textbox {
+  align-items: flex-start;
+  max-width: 620px;
+}
+
+#textbox p {
+  color: #d4d4d8;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(12px, 1.0vw, 15px);
+  line-height: 1.55;
+  margin-bottom: 16px;
+}
+
+/* 1. Фон кухни с пингвином в холодильнике */
+#bg-kitchen {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  z-index: 1;
+}
+
+/* 2. Качающаяся шторка на окне */
+#curtain {
+  left: 62.5%;
+  top: 2.0%;
+  width: 36.5%;
+  height: 22.0%;
+  object-fit: fill;
+  z-index: 4;
+  transform-origin: top center;
+  animation: curtainSway 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes curtainSway {
+  0%, 100% { transform: rotate(0deg) skewX(0deg); }
+  50% { transform: rotate(1.5deg) skewX(-2.5deg); }
+}
+
+/* 3. Закрытая дверца холодильника (перекрывает пингвина до клика) */
+#door-closed {
+  left: 24.25%;
+  top: 17.9%;
+  width: 19.9%;
+  height: 33.4%;
+  object-fit: fill;
+  z-index: 5;
+  cursor: pointer;
+  transition: transform 0.25s ease, filter 0.25s ease, opacity 0.2s ease;
+}
+
+#door-closed:hover {
+  filter: drop-shadow(0 0 10px #ffe600);
+}
+
+/* 4. Открытая дверца холодильника (появляется слева от проема) */
+#door-open {
+  left: 16.5%;
+  top: 16.2%;
+  width: 10.5%;
+  height: 38.7%;
+  object-fit: fill;
+  z-index: 6;
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+  transition: opacity 0.25s ease;
+}
+
+/* 5. Бабл с подсказкой */
+#bubble3 {
+  left: 33.5%;
+  top: 55.0%;
+  width: 26.0%;
+  height: 16.0%;
+  object-fit: fill;
+  z-index: 8;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+@keyframes glow {
+  0% {
+    filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 1));
+  }
+  100% {
+    filter: drop-shadow(0px 0px 10px rgba(255, 251, 0, 0.8));
+  }
+  50% {
+    filter: drop-shadow(0px 0px 10px rgba(255, 250, 0, 0.9));
+  }
+}
+
+#secret-massage {
+  left: 25.7%;
+  top: 42.0%;
+  width: 3.8%;
+  height: 7.0%;
+  object-fit: fill;
+  z-index: 4;
+  animation: glow 4s infinite ease-in-out;
+}
+
+/* 6. Кот и падающее мороженое */
+#cat-sit {
+  left: 11.5%;
+  top: 72.0%;
+  width: 19.5%;
+  height: 19.5%;
+  object-fit: fill;
+  z-index: 7;
+  transition: opacity 0.25s ease;
+}
+
+#cat-walk {
+  left: 8.5%;
+  top: 75.5%;
+  width: 23.0%;
+  height: 16.5%;
+  object-fit: fill;
+  z-index: 7;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+#icecream {
+  left: 31.5%;
+  top: 72.0%;
+  width: 11.5%;
+  height: 16.0%;
+  object-fit: fill;
+  z-index: 8;
+  opacity: 0;
+  transform: translateY(-120px) rotate(-25deg);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+#icecream.dropped {
+  opacity: 1;
+  transform: translateY(0) rotate(0deg);
+}
+

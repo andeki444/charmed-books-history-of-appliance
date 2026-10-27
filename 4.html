@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>История бытовой техники — Холодильник (Часть 3)</title>
+  <link rel="icon" type="image/png" href="./assets/img/icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/main.css">
+  <link rel="stylesheet" href="./assets/4.css">
+  <link rel="stylesheet" href="./assets/ui.css">
+
+  <script>
+    window.addEventListener('load', function () {
+      var loader = document.getElementById('loader');
+      if (loader) loader.remove();
+    });
+  </script>
+
+  <script src="./postMessageHandler.js"></script>
+  <script src="./assets/ui.js"></script>
+</head>
+
+<body>
+
+  <div id="loader">
+    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+  </div>
+
+  <main>
+
+    <!-- ЛЕВАЯ СТРАНИЦА: ТЕКСТ -->
+    <section id="content">
+      <div id="textbox">
+        <div class="content-item">
+          <p>
+            К 1950–1960-м годам холодильник стал привычной частью дома. Инженеры разделили его на две отдельные камеры: холодильную и морозильную, а позже придумали систему No Frost, которая избавила людей от необходимости вручную размораживать наледь со стенок.
+          </p>
+          <p>
+            Однако в конце XX века учёные обнаружили, что старый фреон разрушает озоновый слой Земли. Тогда производители перешли на новые, экологически безопасные хладагенты и улучшили теплоизоляцию, чтобы приборы потребляли в несколько раз меньше электроэнергии.
+          </p>
+          <p>
+            Современные умные холодильники умеют самостоятельно поддерживать разную температуру и влажность в зонах свежести для овощей, рыбы и мяса, фильтровать воздух от запахов и даже подсказывать владельцу через смартфон, какие продукты заканчиваются на полках.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПРАВАЯ СТРАНИЦА: СЦЕНА СОВРЕМЕННОЙ КУХНИ -->
+    <div id="scene">
+      <div id="overflow-wrapper">
+        
+        <!-- 1. Фон кухни (внутри холодильника сидит пингвин) -->
+        <img class="scene__img" id="bg-kitchen" src="./assets/img/page-4/bg-kitchen.png" alt="Кухня">
+
+        <!-- 2. Качающаяся шторка на окне -->
+        <img class="scene__img" id="curtain" src="./assets/img/page-4/curtain.png" alt="Шторка">
+
+        <!-- 3. Дверца холодильника (закрытая и открытая) -->
+        <img class="scene__img" id="door-closed" src="./assets/img/page-4/door-closed.png" alt="Закрытая дверца">
+        <img class="scene__img" id="door-open" src="./assets/img/page-4/door-open.png" alt="Открытая дверца">
+        <img class="scene__img" id="secret-massage" src="./assets/img/page-4/secret-massage.png" alt="Записка">
+
+        <!-- 4. Бабл-подсказка -->
+        <img class="scene__img" id="bubble3" src="./assets/img/page-4/bubble3.png" alt="Откройте дверцу">
+
+        <!-- 5. Кошка и мороженое -->
+        <img class="scene__img" id="cat-sit" src="./assets/img/page-4/cat-sit.png" alt="Сидящий кот">
+        <img class="scene__img" id="cat-walk" src="./assets/img/page-4/cat-walk.png" alt="Идущий кот">
+        <img class="scene__img" id="icecream" src="./assets/img/page-4/icecream.png" alt="Мороженое">
+
+      </div>
+    </div>
+
+  </main>
+
+  <script src="./assets/page4.js"></script>
+</body>
+
+</html>

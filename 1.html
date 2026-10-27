@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>История бытовой техники — Дом Изобретений</title>
+  <link rel="icon" type="image/png" href="./assets/img/icon.png">
+
+  <!-- Подключение шрифтов для вывески и книги -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Neucha&display=swap" rel="stylesheet">
+  <!-- Стили -->
+  <link rel="stylesheet" href="./assets/main.css">
+  <link rel="stylesheet" href="./assets/1.css">
+  <link rel="stylesheet" href="./assets/ui.css">
+
+  <script>
+    window.addEventListener('load', function () {
+      var loader = document.getElementById('loader');
+      if (loader) loader.remove();
+    });
+  </script>
+
+  <script src="./postMessageHandler.js"></script>
+  <script src="./assets/ui.js"></script>
+</head>
+
+<body>
+
+  <!-- Прелоадер -->
+  <div id="loader">
+    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+  </div>
+
+  <main>
+    <div id="scene">
+      <div id="overflow-wrapper">
+        
+        <!-- 1. Фоновый интерьер комнаты -->
+        <img class="scene__img" id="bg-room" src="./assets/img/page-1/bg-room.png" alt="Комната">
+
+        <!-- 2. Вывеска с текстом строго внутри черного поля -->
+        <div id="signboard-box" class="scene__img">
+          <img id="signboard" class="autotrim" src="./assets/img/page-1/signboard.png" alt="Вывеска">
+          <div id="signboard-text">
+            <h2>«Дом Изобретений»!</h2>
+            <p>
+              Добро пожаловать! Здесь каждая вещь —<br>
+              портал в прошлое. Нажмите на технику, чтобы<br>
+              узнать, как она изменила наш быт.<br>
+              От деревянных корыт до умных устройств —<br>
+              исследуйте историю, спрятанную<br>
+              в привычных вещах.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3. Интерактивная техника -->
+        <img class="scene__img appliance autotrim" id="tv" data-tech="tv" data-page="17" src="./assets/img/page-1/tv.png" alt="Телевизор">
+        <img class="scene__img appliance autotrim" id="vacuum" data-tech="vacuum" data-page="9" src="./assets/img/page-1/vacuum.png" alt="Пылесос">
+        <img class="scene__img appliance autotrim" id="washer" data-tech="washer" data-page="5" src="./assets/img/page-1/washer.png" alt="Стиральная машина">
+        <img class="scene__img appliance autotrim" id="toaster" data-tech="toaster" data-page="13" src="./assets/img/page-1/toaster.png" alt="Тостер">
+        <img class="scene__img appliance autotrim" id="microwave" data-tech="microwave" data-page="21" src="./assets/img/page-1/microwave.png" alt="Микроволновка">
+        <img class="scene__img appliance autotrim" id="fridge" data-tech="fridge" data-page="2" src="./assets/img/page-1/fridge.png" alt="Холодильник">
+
+        <!-- 4. Персонажи -->
+        <img class="scene__img autotrim" id="cat" src="./assets/img/page-1/cat.png" alt="Кошка">
+        <img class="scene__img autotrim" id="dog" src="./assets/img/page-1/dog.png" alt="Собака">
+
+        <!-- 5. Летающая пчела -->
+        <div id="bee" class="scene__img">
+          <svg viewBox="0 0 24 24" width="24" height="24">
+            <ellipse cx="12" cy="14" rx="7" ry="5" fill="#facc15" stroke="#111" stroke-width="1.5"/>
+            <line x1="9" y1="10" x2="9" y2="18" stroke="#111" stroke-width="1.5"/>
+            <line x1="13" y1="9.5" x2="13" y2="18.5" stroke="#111" stroke-width="1.5"/>
+            <ellipse class="wing wing-l" cx="9" cy="7" rx="3.5" ry="5" fill="rgba(255,255,255,0.85)" stroke="#38bdf8" stroke-width="1"/>
+            <ellipse class="wing wing-r" cx="14" cy="7" rx="3.5" ry="5" fill="rgba(255,255,255,0.85)" stroke="#38bdf8" stroke-width="1"/>
+          </svg>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="./assets/page1.js"></script>
+</body>
+
+</html>
